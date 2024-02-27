@@ -1,19 +1,19 @@
 <template>
-  <v-container fluid class="black gg" style="height: 100%; padding: 8rem 4rem">
-    <v-row>
-      <v-col cols="12" md="6" class="white--text" align-self="center"
+  <v-container fluid class="black gg" style="height: 100%; padding: 4rem 0">
+    <v-row style="margin-bottom: 8rem">
+      <v-col cols="12" md="6" class="white--text pl-12" align-self="center"
         ><div class="word">{{ currentWord }} |</div>
         <p class="text-h6 my-4">
           A passionate web developer dedicated to crafting engaging and
           user-friendly digital experiences.
         </p>
-        <p class="text-subtitle-1 mt-4">
+        <p class="text-subtitle-1 grey--text mt-4">
           I thrive on tackling complex challenges and finding innovative
           solutions to meet project goals. Whether it's creating intuitive user
           interfaces or optimizing website performance, I'm committed to
           delivering results that exceed expectations.
         </p>
-        <p class="text-subtitle-1 mt-4">
+        <p class="text-subtitle-1 grey--text mt-4">
           I prefer to keep learning, continue challenging myself, and do
           interesting things that matter. Fueled by high energy levels and
           boundless enthusiasm, I’m easily inspired and more then willing to
@@ -32,7 +32,9 @@
         />
       </v-col>
     </v-row>
+    <hr />
     <aboutVue />
+    <hr />
     <!-- <projectVue /> -->
     <connectVue />
   </v-container>
@@ -116,16 +118,15 @@ export default {
 }
 
 .avatar-img {
-  transition: transform 2s ease;
-  max-width: 50%;
+  transition: transform 1s ease;
+  max-width: 55%;
   object-fit: contain; /* Ensures the image maintains aspect ratio */
-  border-radius: 12rem 1rem 1rem 12rem;
+  border-radius: 12rem 0rem 0rem 12rem;
 }
 
 .avatar-img:hover {
   transform: scale(1.1);
-  border: 5px solid rgb(255, 255, 255);
-  border-radius: 12rem 1rem 1rem 12rem;
+  border-radius: 12rem 0rem 0rem 12rem;
 }
 
 .gg {

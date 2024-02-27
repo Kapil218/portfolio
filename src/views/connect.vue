@@ -1,5 +1,5 @@
 <template>
-  <v-row class="gg2 rounded-xl" style="margin-top: 8rem" justify="center">
+  <v-row class="gg2 rounded-xl" justify="center">
     <v-col cols="8">
       <v-form ref="form" v-model="valid">
         <v-container>
@@ -70,6 +70,6 @@ export default {
 <style scoped>
 .gg2 {
   /* Gradient */
-  background: linear-gradient(to bottom right, #eeb7b7, #91b4bd);
+  background: linear-gradient(to bottom right, #00c3fe, #91b4bd);
 }
 </style>

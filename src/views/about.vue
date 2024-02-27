@@ -1,25 +1,44 @@
 <template>
-  <v-row justify="center" align="center" style="margin-top: 12rem">
-    <v-col cols="12" class="text-center white--text text-h2"
-      >Web Technologies</v-col
+  <v-row justify="center" align="center" class="mx-4" style="margin: 4rem 0">
+    <v-col cols="12" class="text-center text-h3 mb-4" style="color: yellow">
+      I'm Working on</v-col
     >
     <v-col
+      cols="12"
+      class="text-center mb-4"
+      style="
+        color: rgb(255, 255, 255);
+        font-family: 'Courier New', Courier, monospace;
+      "
+      >I strongly value thinking creatively and outside the conventional
+      boundaries. I also believe that learning is a continuous process that
+      persists throughout one's life, regardless of age. Adopting a
+      straightforward and uncomplicated approach to life, while still
+      maintaining ambitious aspirations, is my philosophy. With this mindset, I
+      am actively pursuing my objectives.</v-col
+    >
+
+    <v-col
       md="2"
-      cols="3"
+      cols="12"
       sm="4"
       v-for="(item, i) in technologies"
       :key="i"
       class="text-center"
     >
-      <v-avatar class="mx-2" size="150">
-        <v-img
-          style="max-width: 100%; max-height: 100%"
-          :src="item.src"
-          alt="Avatar"
-          contain
-        />
-      </v-avatar>
-      <p class="text-h5" style="color: rgb(0, 217, 255)">{{ item.name }}</p>
+      <v-tooltip bottom>
+        <template v-slot:activator="{ on, attrs }">
+          <v-avatar class="ma-4 logo" size="150" v-bind="attrs" v-on="on">
+            <v-img
+              style="max-width: 100%; max-height: 100%"
+              :src="item.src"
+              alt="Avatar"
+              contain
+            />
+          </v-avatar>
+        </template>
+        <span class="text-h6">{{ item.name }}</span>
+      </v-tooltip>
     </v-col>
   </v-row>
 </template>
@@ -29,19 +48,27 @@ export default {
   data() {
     return {
       technologies: [
-        { name: "Vue", src: require("../assets/vue.png") },
-        { name: "Vuetify", src: require("../assets/vuetify.png") },
-        { name: "HTML", src: require("../assets/html.png") },
-        { name: "CSS", src: require("../assets/css.png") },
+        { name: "Vue", src: require("../assets/vue.svg") },
+        { name: "Vuetify", src: require("../assets/vuetify.svg") },
+        { name: "HTML", src: require("../assets/html.svg") },
+        { name: "CSS", src: require("../assets/css.svg") },
+        { name: "JS", src: require("../assets/js.svg") },
         { name: "React", src: require("../assets/react.png") },
         { name: "Express", src: require("../assets/express.png") },
-        { name: "MongoDb", src: require("../assets/mongodb.png") },
-        { name: "NodeJs", src: require("../assets/nodejs.png") },
-        { name: "Bootstrap", src: require("../assets/bootstrap.png") },
+        { name: "MongoDb", src: require("../assets/mongodb.svg") },
+        { name: "NodeJs", src: require("../assets/nodejs.svg") },
+        { name: "Bootstrap", src: require("../assets/bootstrap.svg") },
       ],
     };
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.logo {
+  transition: transform 0.2s ease;
+}
+.logo:hover {
+  transform: scale(1.2);
+}
+</style>
