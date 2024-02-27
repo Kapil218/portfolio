@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="center" align="center" class="mx-4" style="margin: 4rem 0">
+  <v-row justify="center" align="center" class="mx-12" style="margin: 4rem 0">
     <v-col cols="12" class="text-h4 mb-4" style="color: rgb(92, 181, 94)">
       Experience</v-col
     >
@@ -21,7 +21,9 @@
           </v-list-item>
 
           <v-card-actions class="d-flex justify-center">
-            <v-btn outlined color="teal" rounded text> Company Website </v-btn>
+            <v-btn href="https://agprop.in/" outlined color="teal" rounded text>
+              Company Website
+            </v-btn>
           </v-card-actions>
         </v-card>
       </template>

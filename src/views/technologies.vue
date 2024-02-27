@@ -1,12 +1,12 @@
 <template>
-  <v-row justify="center" align="center" class="mx-8" style="margin: 4rem 0">
+  <v-row justify="center" align="center" class="mx-12" style="margin: 4rem 0">
     <v-col cols="12" class="text-center text-h3 mb-4" style="color: yellow">
       I'm Working on</v-col
     >
     <v-col
       cols="12"
       class="text-center mb-4"
-      style="color: rgb(255, 255, 255); word-spacing: 5px"
+      style="color: rgb(255, 255, 255); word-spacing: 5px; font-size: larger"
       >I strongly value thinking creatively and outside the conventional
       boundaries. I also believe that learning is a continuous process that
       persists throughout one's life, regardless of age. Adopting a
@@ -25,7 +25,7 @@
     >
       <v-tooltip bottom>
         <template v-slot:activator="{ on, attrs }">
-          <v-avatar class="ma-4 logo" size="150" v-bind="attrs" v-on="on">
+          <v-avatar class="ma-4 logo" size="100" v-bind="attrs" v-on="on">
             <v-img
               style="max-width: 100%; max-height: 100%"
               :src="item.src"
@@ -55,6 +55,7 @@ export default {
         { name: "MongoDb", src: require("../assets/mongodb.svg") },
         { name: "NodeJs", src: require("../assets/nodejs.svg") },
         { name: "Bootstrap", src: require("../assets/bootstrap.svg") },
+        { name: "Github", src: require("../assets/github.png") },
       ],
     };
   },

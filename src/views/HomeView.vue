@@ -6,22 +6,28 @@
           Hola!
         </p>
         <p class="word">{{ currentWord }} |</p>
-        <p class="text-h6 my-4">
-          A passionate web developer dedicated to crafting engaging and
-          user-friendly digital experiences.
+        <p class="text-h6 primary--text my-4">
+          Always eager to learn new technologies and develop new things based on
+          it.
         </p>
-        <p class="grey--text mt-4" style="word-spacing: 5px">
+        <p class="grey--text mt-4" style="word-spacing: 5px; font-size: large">
           I thrive on tackling complex challenges and finding innovative
           solutions to meet project goals. Whether it's creating intuitive user
           interfaces or optimizing website performance, I'm committed to
           delivering results that exceed expectations.
         </p>
-        <p class="grey--text mt-4" style="word-spacing: 5px">
-          I prefer to keep learning, continue challenging myself, and do
-          interesting things that matter. Fueled by high energy levels and
-          boundless enthusiasm, I’m easily inspired and more then willing to
-          follow my fascinations wherever they take me.
-        </p>
+        <v-btn
+          v-for="(icon, i) in icons"
+          :key="i"
+          class="mr-8 my-4 white--text icon"
+          icon
+          :href="icon.link"
+          target="_blank"
+        >
+          <v-icon size="40px">
+            {{ icon.icon }}
+          </v-icon>
+        </v-btn>
       </v-col>
       <v-col cols="12" md="4" class="white--text text-end">
         <v-spacer></v-spacer>
@@ -41,6 +47,7 @@
     <experienceVue />
     <hr />
     <resumeVue />
+    <hr />
     <connectVue />
   </v-container>
 </template>
@@ -55,8 +62,28 @@ export default {
   components: { connectVue, technologiesVue, experienceVue, resumeVue },
   data() {
     return {
+      icons: [
+        { icon: "mdi-github", link: "https://github.com/Kapil218" },
+
+        {
+          icon: "mdi-linkedin",
+          link: "https://www.linkedin.com/in/kapil-singh-rathore-42443a22a/",
+        },
+        {
+          icon: "mdi-instagram",
+          link: "https://www.instagram.com/kapil.singhrathore/",
+        },
+        {
+          icon: "mdi-gmail",
+          link: "https://mail.google.com/mail/?view=cm&fs=1&to=kapilsinghrathore218@gmail.com",
+        },
+      ],
       src: require("@/assets/profile.png"),
-      words: ["Welcome to my portfolio!", "I'm Kapil Singh Rathore"],
+      words: [
+        "I'm Kapil Singh Rathore",
+        "Software Engineer ",
+        "Developer Expert for Web",
+      ],
       currentWord: "",
       part: "",
       i: 0,
@@ -116,6 +143,12 @@ export default {
 </script>
 
 <style scoped>
+.icon {
+  transition: transform 0.4s ease;
+}
+.icon:hover {
+  transform: scale(1.3);
+}
 .word {
   margin: auto;
   color: rgb(92, 181, 94);
