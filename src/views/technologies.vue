@@ -5,7 +5,7 @@
     >
     <v-col
       cols="12"
-      class="text-center mb-4"
+      class="mb-4"
       style="color: rgb(255, 255, 255); word-spacing: 5px; font-size: larger"
       >I strongly value thinking creatively and outside the conventional
       boundaries. I also believe that learning is a continuous process that
@@ -17,7 +17,7 @@
 
     <v-col
       md="2"
-      cols="12"
+      cols="6"
       sm="4"
       v-for="(item, i) in technologies"
       :key="i"

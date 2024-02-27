@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="black gg" style="height: 100%; padding-top: 4rem">
-    <v-row style="margin-bottom: 8rem">
+    <v-row style="margin-bottom: 8rem" justify="end">
       <v-col cols="12" md="8" class="white--text pl-12" align-self="center"
         ><p style="font: 500 normal 2.5em 'tahoma'; color: rgb(22, 223, 234)">
           Hola!
@@ -29,7 +29,7 @@
           </v-icon>
         </v-btn>
       </v-col>
-      <v-col cols="12" md="4" class="white--text text-end">
+      <v-col cols="8" sm="6" md="4" class="white--text text-end">
         <v-spacer></v-spacer>
         <!-- <img :src="src" alt="Avatar" /> -->
         <img
