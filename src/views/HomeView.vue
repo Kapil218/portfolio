@@ -17,9 +17,7 @@
           I prefer to keep learning, continue challenging myself, and do
           interesting things that matter. Fueled by high energy levels and
           boundless enthusiasm, I’m easily inspired and more then willing to
-          follow my fascinations wherever they take me. I’m passionate,
-          expressive, multi-talented spirit with a natural ability to entertain
-          and inspire. I’m never satisfied to just come up with ideas.
+          follow my fascinations wherever they take me.
         </p>
       </v-col>
       <v-col cols="12" md="6" class="white--text text-end">

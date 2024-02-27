@@ -2,7 +2,9 @@
   <v-app>
     <v-app-bar class="gg2" app color="#455A64" dark>
       <div class="d-flex align-center">
-        <v-btn text to="/"><span class="rounded text-h4">KSR</span> </v-btn>
+        <v-btn x-large text to="/"
+          ><span class="rounded" style="font-family: cursive">KSR</span>
+        </v-btn>
       </div>
 
       <v-spacer></v-spacer>
@@ -47,6 +49,10 @@ export default {
       {
         icon: "mdi-instagram",
         link: "https://www.instagram.com/kapil.singhrathore/",
+      },
+      {
+        icon: "mdi-gmail",
+        link: "https://mail.google.com/mail/?view=cm&fs=1&to=kapilsinghrathore218@gmail.com",
       },
     ],
   }),
