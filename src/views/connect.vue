@@ -1,5 +1,5 @@
 <template>
-  <v-row class="gg2 rounded-xl" justify="center">
+  <v-row class="gg2" justify="center">
     <v-col cols="8">
       <v-form ref="form" v-model="valid">
         <v-container>

@@ -2,8 +2,11 @@
   <v-app>
     <v-app-bar class="gg2" app color="#455A64" dark>
       <div class="d-flex align-center">
-        <v-btn x-large text to="/"
-          ><span class="rounded" style="font-family: cursive">KSR</span>
+        <v-btn rounded x-large text to="/"
+          ><span style="font-family: cursive" class="grey--text mr-2"
+            >Portfolio</span
+          >
+          <span style="font-family: cursive">KSR</span>
         </v-btn>
       </div>
 
@@ -32,6 +35,11 @@
     <v-main>
       <router-view />
     </v-main>
+    <v-footer class="d-flex flex-column">
+      <div class="px-4 py-2 bg-black text-center w-100">
+        {{ new Date().getFullYear() }} — <strong>Kapil Singh Rathore</strong>
+      </div>
+    </v-footer>
   </v-app>
 </template>
 

@@ -1,26 +1,29 @@
 <template>
-  <v-container fluid class="black gg" style="height: 100%; padding: 4rem 0">
+  <v-container fluid class="black gg" style="height: 100%; padding-top: 4rem">
     <v-row style="margin-bottom: 8rem">
-      <v-col cols="12" md="6" class="white--text pl-12" align-self="center"
-        ><div class="word">{{ currentWord }} |</div>
+      <v-col cols="12" md="8" class="white--text pl-12" align-self="center"
+        ><p style="font: 500 normal 2.5em 'tahoma'; color: rgb(22, 223, 234)">
+          Hola!
+        </p>
+        <p class="word">{{ currentWord }} |</p>
         <p class="text-h6 my-4">
           A passionate web developer dedicated to crafting engaging and
           user-friendly digital experiences.
         </p>
-        <p class="text-subtitle-1 grey--text mt-4">
+        <p class="grey--text mt-4" style="word-spacing: 5px">
           I thrive on tackling complex challenges and finding innovative
           solutions to meet project goals. Whether it's creating intuitive user
           interfaces or optimizing website performance, I'm committed to
           delivering results that exceed expectations.
         </p>
-        <p class="text-subtitle-1 grey--text mt-4">
+        <p class="grey--text mt-4" style="word-spacing: 5px">
           I prefer to keep learning, continue challenging myself, and do
           interesting things that matter. Fueled by high energy levels and
           boundless enthusiasm, I’m easily inspired and more then willing to
           follow my fascinations wherever they take me.
         </p>
       </v-col>
-      <v-col cols="12" md="6" class="white--text text-end">
+      <v-col cols="12" md="4" class="white--text text-end">
         <v-spacer></v-spacer>
         <!-- <img :src="src" alt="Avatar" /> -->
         <img
@@ -33,24 +36,27 @@
       </v-col>
     </v-row>
     <hr />
-    <aboutVue />
+    <technologiesVue />
     <hr />
-    <!-- <projectVue /> -->
+    <experienceVue />
+    <hr />
+    <resumeVue />
     <connectVue />
   </v-container>
 </template>
 
 <script>
 import connectVue from "./connect.vue";
-// import projectVue from "./project.vue";
-import aboutVue from "./about.vue";
+import experienceVue from "./experience.vue";
+import technologiesVue from "./technologies.vue";
+import resumeVue from "./resume.vue";
 export default {
   name: "Home",
-  components: { connectVue, aboutVue },
+  components: { connectVue, technologiesVue, experienceVue, resumeVue },
   data() {
     return {
       src: require("@/assets/profile.png"),
-      words: ["Hi", "Welcome to my portfolio!", "I'm Kapil Singh Rathore"],
+      words: ["Welcome to my portfolio!", "I'm Kapil Singh Rathore"],
       currentWord: "",
       part: "",
       i: 0,
@@ -112,20 +118,20 @@ export default {
 <style scoped>
 .word {
   margin: auto;
-  color: rgb(22, 223, 234);
+  color: rgb(92, 181, 94);
   font: 500 normal 2.5em "tahoma";
   text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
 }
 
 .avatar-img {
   transition: transform 1s ease;
-  max-width: 55%;
+  max-width: 90%;
   object-fit: contain; /* Ensures the image maintains aspect ratio */
   border-radius: 12rem 0rem 0rem 12rem;
 }
 
 .avatar-img:hover {
-  transform: scale(1.1);
+  transform: scale(1.01);
   border-radius: 12rem 0rem 0rem 12rem;
 }
 

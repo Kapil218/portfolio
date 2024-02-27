@@ -1,15 +1,12 @@
 <template>
-  <v-row justify="center" align="center" class="mx-4" style="margin: 4rem 0">
+  <v-row justify="center" align="center" class="mx-8" style="margin: 4rem 0">
     <v-col cols="12" class="text-center text-h3 mb-4" style="color: yellow">
       I'm Working on</v-col
     >
     <v-col
       cols="12"
       class="text-center mb-4"
-      style="
-        color: rgb(255, 255, 255);
-        font-family: 'Courier New', Courier, monospace;
-      "
+      style="color: rgb(255, 255, 255); word-spacing: 5px"
       >I strongly value thinking creatively and outside the conventional
       boundaries. I also believe that learning is a continuous process that
       persists throughout one's life, regardless of age. Adopting a
