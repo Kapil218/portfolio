@@ -21,26 +21,33 @@
         </p>
       </v-col>
       <v-col cols="12" md="6" class="white--text text-end">
-        <v-spacer></v-spacer
-        ><v-avatar size="400">
-          <img :src="require('@/assets/profile.png')" alt="Avatar" /> </v-avatar
-      ></v-col>
+        <v-spacer></v-spacer>
+        <!-- <img :src="src" alt="Avatar" /> -->
+        <img
+          :src="src"
+          @mouseover="changeImage"
+          @mouseout="resetImage"
+          alt="Avatar"
+          class="avatar-img"
+        />
+      </v-col>
     </v-row>
-    <projectVue />
-    <connectVue />
     <aboutVue />
+    <!-- <projectVue /> -->
+    <connectVue />
   </v-container>
 </template>
 
 <script>
 import connectVue from "./connect.vue";
-import projectVue from "./project.vue";
+// import projectVue from "./project.vue";
 import aboutVue from "./about.vue";
 export default {
   name: "Home",
-  components: { projectVue, connectVue, aboutVue },
+  components: { connectVue, aboutVue },
   data() {
     return {
+      src: require("@/assets/profile.png"),
       words: ["Hi", "Welcome to my portfolio!", "I'm Kapil Singh Rathore"],
       currentWord: "",
       part: "",
@@ -60,6 +67,13 @@ export default {
   },
 
   methods: {
+    changeImage() {
+      this.src = require("@/assets/profile22.jpeg");
+    },
+    resetImage() {
+      this.src = require("@/assets/profile.png");
+    },
+
     wordflick() {
       if (this.forwards) {
         if (this.offset >= this.words[this.i].length) {
@@ -96,15 +110,29 @@ export default {
 <style scoped>
 .word {
   margin: auto;
-  color: white;
+  color: rgb(22, 223, 234);
   font: 500 normal 2.5em "tahoma";
   text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
 }
+
+.avatar-img {
+  transition: transform 2s ease;
+  max-width: 50%;
+  object-fit: contain; /* Ensures the image maintains aspect ratio */
+  border-radius: 12rem 1rem 1rem 12rem;
+}
+
+.avatar-img:hover {
+  transform: scale(1.1);
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 12rem 1rem 1rem 12rem;
+}
+
 .gg {
   /* Fallback color */
   background-color: #000000;
 
   /* Gradient */
-  background-image: linear-gradient(to bottom right, #6db6de, #0e0d0e);
+  background-image: linear-gradient(to bottom right, #0f1010, #0e0d0e);
 }
 </style>

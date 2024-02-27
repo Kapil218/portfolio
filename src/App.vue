@@ -8,6 +8,7 @@
       </div>
 
       <v-spacer></v-spacer>
+
       <span
         class="white--text mr-2"
         style="font-size: 1.2rem; font-family: cursive"
@@ -15,9 +16,9 @@
         FOLLOW ME@
       </span>
       <v-btn
-        v-for="icon in icons"
-        :key="icon"
-        class="mx-2 my-4 white--text"
+        v-for="(icon, i) in icons"
+        :key="i"
+        class="mx-2 my-4 white--text icon"
         icon
         :href="icon.link"
         target="_blank"
@@ -65,5 +66,8 @@ export default {
 
   /* Gradient */
   background-image: linear-gradient(to bottom right, #000000, #262e30);
+}
+.icon:hover {
+  box-shadow: 0 0 5px #fffffe;
 }
 </style>

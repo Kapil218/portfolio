@@ -1,9 +1,9 @@
 <template>
-  <v-row class="white rounded-xl">
-    <v-col cols="12">
+  <v-row class="gg2 rounded-xl" style="margin-top: 8rem" justify="center">
+    <v-col cols="8">
       <v-form ref="form" v-model="valid">
         <v-container>
-          <span class="grey--text" style="font-size: 1.5rem">Let's Talk</span>
+          <span class="white--text" style="font-size: 1.5rem">Let's Talk</span>
 
           <v-row>
             <v-col cols="12">
@@ -67,4 +67,9 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.gg2 {
+  /* Gradient */
+  background: linear-gradient(to bottom right, #eeb7b7, #91b4bd);
+}
+</style>

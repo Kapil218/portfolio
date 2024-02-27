@@ -1,8 +1,8 @@
 <template>
-  <v-row>
+  <v-row class="mt-6">
     <v-col
       v-for="(pro, index) in projects"
-      :key="pro.title"
+      :key="index"
       cols="12"
       class="text-xs-center"
     >
