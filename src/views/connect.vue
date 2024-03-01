@@ -1,5 +1,9 @@
 <template>
-  <v-row justify="center" align="center" style="padding: 4rem">
+  <v-row
+    justify="center"
+    align="center"
+    :style="{ padding: isMobile ? '4rem 12px' : '4rem' }"
+  >
     <v-col cols="12" class="text-h4 mb-4" style="color: rgb(92, 181, 94)">
       Let's Connect
     </v-col>
@@ -70,6 +74,11 @@ export default {
     email: "",
     message: "",
   }),
+  computed: {
+    isMobile() {
+      return this.$vuetify.breakpoint.xsOnly;
+    },
+  },
   methods: {
     submit() {
       console.log(this.firstname, this.lastname, this.email, this.message);

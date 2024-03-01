@@ -1,5 +1,9 @@
 <template>
-  <v-row justify="center" align="center" style="padding: 4rem">
+  <v-row
+    justify="center"
+    align="center"
+    :style="{ padding: isMobile ? '4rem 12px' : '4rem' }"
+  >
     <v-col cols="12" class="text-h4 mb-4" style="color: rgb(92, 181, 94)">
       Experience</v-col
     >
@@ -35,6 +39,11 @@
 export default {
   data() {
     return {};
+  },
+  computed: {
+    isMobile() {
+      return this.$vuetify.breakpoint.xsOnly;
+    },
   },
 };
 </script>

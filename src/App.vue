@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar class="gg2" app color="#455A64" dark>
       <div class="d-flex align-center">
-        <v-btn class="nav" rounded x-large text to="/"
+        <v-btn href="#hero" class="nav" rounded x-large text
           ><span style="font-family: cursive" class="grey--text mr-2"
             >Portfolio</span
           >

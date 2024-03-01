@@ -1,5 +1,9 @@
 <template>
-  <v-row justify="center" align="center" style="padding: 4rem">
+  <v-row
+    justify="center"
+    align="center"
+    :style="{ padding: isMobile ? '4rem 12px' : '4rem' }"
+  >
     <v-col
       cols="12"
       class="text-center text-h4 mb-4"
@@ -11,10 +15,8 @@
       cols="12"
       class="mb-4"
       style="color: rgb(218, 208, 208); word-spacing: 5px"
-      >I strongly value thinking creatively and outside the conventional
-      boundaries. I also believe that learning is a continuous process that
-      persists throughout one's life, regardless of age. Adopting a
-      straightforward and uncomplicated approach to life, while still
+    >
+      Adopting a straightforward and uncomplicated approach to life, while still
       maintaining ambitious aspirations, is my philosophy. With this mindset, I
       am actively pursuing my objectives.</v-col
     >
@@ -62,6 +64,11 @@ export default {
         { name: "Github", src: require("../assets/github.png") },
       ],
     };
+  },
+  computed: {
+    isMobile() {
+      return this.$vuetify.breakpoint.xsOnly;
+    },
   },
 };
 </script>
