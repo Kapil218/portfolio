@@ -48,17 +48,24 @@
         or optimizing website performance, I'm committed to delivering results
         that exceed expectations.
       </p>
-      <div :class="isMobile ? 'text-center' : ''">
-        <span class="rounded-pill pa-5" style="border: 1px solid grey">
+      <div :class="isMobile ? 'text-center' : 'pa-3'">
+        <span
+          :class="isMobile ? 'rounded-pill py-3' : 'rounded-pill py-5'"
+          style="border: 1px solid grey"
+        >
           <v-btn
             v-for="(icon, i) in icons"
             :key="i"
-            class="mx-4 my-3 white--text icon"
+            :class="
+              isMobile
+                ? 'mx-2 my-3 white--text icon'
+                : 'mx-4 my-3 white--text icon'
+            "
             icon
             :href="icon.link"
             target="_blank"
           >
-            <v-icon size="40px">
+            <v-icon :size="isMobile ? '30' : '40'">
               {{ icon.icon }}
             </v-icon>
           </v-btn>
