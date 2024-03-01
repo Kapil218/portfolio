@@ -1,12 +1,16 @@
 <template>
-  <v-row justify="center" align="center" class="mx-12" style="margin: 4rem 0">
-    <v-col cols="12" class="text-center text-h3 mb-4" style="color: yellow">
+  <v-row justify="center" align="center" style="padding: 4rem">
+    <v-col
+      cols="12"
+      class="text-center text-h4 mb-4"
+      style="color: rgb(204, 204, 1)"
+    >
       I'm Working on</v-col
     >
     <v-col
       cols="12"
       class="mb-4"
-      style="color: rgb(255, 255, 255); word-spacing: 5px; font-size: larger"
+      style="color: rgb(218, 208, 208); word-spacing: 5px"
       >I strongly value thinking creatively and outside the conventional
       boundaries. I also believe that learning is a continuous process that
       persists throughout one's life, regardless of age. Adopting a

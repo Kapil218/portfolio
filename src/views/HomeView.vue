@@ -1,7 +1,16 @@
 <template>
-  <v-container fluid class="black gg" style="height: 100%; padding-top: 4rem">
+  <v-container
+    fluid
+    class="black gg"
+    style="height: 100%; padding-top: 4rem"
+    @scroll="handleScroll"
+  >
     <v-row style="margin-bottom: 8rem" justify="end">
-      <v-col cols="12" md="8" class="white--text pl-12" align-self="center"
+      <v-col
+        cols="12"
+        md="8"
+        class="intro white--text pl-12"
+        align-self="center"
         ><p style="font: 500 normal 2.5em 'tahoma'; color: rgb(22, 223, 234)">
           Hola!
         </p>
@@ -29,26 +38,28 @@
           </v-icon>
         </v-btn>
       </v-col>
-      <v-col cols="8" sm="6" md="4" class="white--text text-end">
+      <v-col cols="8" sm="6" md="4" class="profile-img white--text text-end">
         <v-spacer></v-spacer>
         <!-- <img :src="src" alt="Avatar" /> -->
-        <img
-          :src="src"
-          @mouseover="changeImage"
-          @mouseout="resetImage"
-          alt="Avatar"
-          class="avatar-img"
-        />
+        <v-avatar size="400">
+          <img
+            :src="src"
+            @mouseover="changeImage"
+            @mouseout="resetImage"
+            alt="Avatar"
+            class="avatar-img"
+          />
+        </v-avatar>
       </v-col>
     </v-row>
     <hr />
-    <technologiesVue />
+    <technologiesVue id="technologies" class="loading" />
     <hr />
-    <experienceVue />
+    <experienceVue id="experience" class="loading" />
     <hr />
-    <resumeVue />
+    <resumeVue id="resume" class="loading" />
     <hr />
-    <connectVue />
+    <connectVue id="connect" class="loading" />
   </v-container>
 </template>
 
@@ -102,8 +113,21 @@ export default {
   },
 
   methods: {
+    handleScroll() {
+      const parentElement = this.$el;
+      const children = parentElement.querySelectorAll(".loading");
+      const windowHeight = window.innerHeight;
+
+      children.forEach((child, index) => {
+        const rect = child.getBoundingClientRect();
+        const isVisible = rect.top >= 0 && rect.bottom <= windowHeight;
+        if (isVisible) {
+          this.activeChildIndex = index;
+        }
+      });
+    },
     changeImage() {
-      this.src = require("@/assets/profile22.jpeg");
+      this.src = require("@/assets/profile222.jpeg");
     },
     resetImage() {
       this.src = require("@/assets/profile.png");
@@ -143,11 +167,14 @@ export default {
 </script>
 
 <style scoped>
+.loading.active {
+  animation: loading 900ms linear 2s;
+}
 .icon {
   transition: transform 0.4s ease;
 }
 .icon:hover {
-  transform: scale(1.3);
+  transform: scale(1.1);
 }
 .word {
   margin: auto;
@@ -156,23 +183,71 @@ export default {
   text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
 }
 
-.avatar-img {
-  transition: transform 1s ease;
-  max-width: 90%;
-  object-fit: contain; /* Ensures the image maintains aspect ratio */
-  border-radius: 12rem 0rem 0rem 12rem;
-}
-
 .avatar-img:hover {
-  transform: scale(1.01);
-  border-radius: 12rem 0rem 0rem 12rem;
+  animation: load 2s;
 }
+@keyframes load {
+  0% {
+    opacity: 0.4;
+  }
 
+  100% {
+    opacity: 1;
+    scale: 1.2;
+  }
+}
+.loading {
+  animation: loading 900ms linear 2s;
+}
+@keyframes loading {
+  0% {
+    opacity: 0.1;
+    transform: translateX(100%);
+  }
+  33% {
+    opacity: 0.3;
+    transform: translateX(66%);
+  }
+  66% {
+    opacity: 0.6;
+    transform: translateX(33%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
 .gg {
   /* Fallback color */
   background-color: #000000;
 
   /* Gradient */
   background-image: linear-gradient(to bottom right, #0f1010, #0e0d0e);
+}
+.intro {
+  animation: loading-intro 2s ease-out 1s;
+}
+@keyframes loading-intro {
+  0% {
+    opacity: 0.2;
+    transform: translateX(-1000%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+.profile-img {
+  animation: loading-image 2s ease-out 1s;
+}
+@keyframes loading-image {
+  0% {
+    opacity: 0.2;
+    transform: translateX(1000%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 </style>

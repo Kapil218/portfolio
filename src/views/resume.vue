@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="center" align="center" class="mx-8" style="margin: 4rem 0">
+  <v-row justify="center" align="center" style="padding: 4rem">
     <v-col cols="12" class="text-h4 mb-4" style="color: rgb(92, 181, 94)">
       Acadmics & CV</v-col
     >
