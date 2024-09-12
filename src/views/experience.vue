@@ -12,7 +12,7 @@
         <v-card class="mx-auto" max-width="400" outlined>
           <v-list-item three-line>
             <v-list-item-content>
-              <div class="text-overline mb-4">DECEMBER 2022 - Present</div>
+              <div class="text-overline mb-4">DECEMBER 2022 - MAY 2024</div>
               <v-list-item-title class="text-h5 mb-1">
                 Web Developer Intern
               </v-list-item-title>

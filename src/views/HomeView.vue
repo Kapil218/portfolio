@@ -2,13 +2,13 @@
   <v-container fluid class="black gg" style="height: 100%">
     <heroVue id="hero" />
     <hr />
-    <technologiesVue id="technologies" class="loading" />
+    <technologiesVue id="technologies"   />
     <hr />
-    <experienceVue id="experience" class="loading" />
+    <experienceVue id="experience"   />
     <hr />
-    <resumeVue id="resume" class="loading" />
+    <resumeVue id="resume"   />
     <hr />
-    <connectVue id="connect" class="loading" />
+    <connectVue id="connect"   />
   </v-container>
 </template>
 
@@ -34,27 +34,7 @@ export default {
 </script>
 
 <style scoped>
-.loading {
-  animation: loading 900ms linear 2s;
-}
-@keyframes loading {
-  0% {
-    opacity: 0.1;
-    transform: translateX(100%);
-  }
-  33% {
-    opacity: 0.3;
-    transform: translateX(66%);
-  }
-  66% {
-    opacity: 0.6;
-    transform: translateX(33%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
+
 .gg {
   /* Fallback color */
   background-color: #000000;

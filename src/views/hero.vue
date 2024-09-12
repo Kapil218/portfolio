@@ -11,22 +11,19 @@
       md="4"
       class="profile-img white--text text-center pb-8"
     >
-      <!-- <img :src="src" alt="Avatar" /> -->
-      <v-avatar size="200">
+        <v-avatar size="200">
         <v-img
           :src="src"
-          @mouseover="changeImage"
-          @mouseout="resetImage"
           alt="Avatar"
           class="avatar-img"
         />
-      </v-avatar>
+      </v-avatar> 
     </v-col>
     <v-col
       cols="12"
       md="8"
       sm="6"
-      class="intro white--text pb-8"
+      class=" white--text pb-8"
       align-self="center"
       ><p style="font: 500 normal 2.5em 'tahoma'; color: rgb(22, 223, 234)">
         Hola!
@@ -79,12 +76,9 @@
       md="4"
       class="profile-img white--text text-center pb-8"
     >
-      <!-- <img :src="src" alt="Avatar" /> -->
       <v-avatar size="300">
         <v-img
           :src="src"
-          @mouseover="changeImage"
-          @mouseout="resetImage"
           alt="Avatar"
           class="avatar-img"
         />
@@ -151,13 +145,6 @@ export default {
         }
       });
     },
-    changeImage() {
-      this.src = require("@/assets/profile222.jpeg");
-    },
-    resetImage() {
-      this.src = require("@/assets/profile.png");
-    },
-
     wordflick() {
       if (this.forwards) {
         if (this.offset >= this.words[this.i].length) {
@@ -195,7 +182,7 @@ export default {
   transition: transform 0.4s ease;
 }
 .icon:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .word {
   margin: auto;
@@ -204,43 +191,4 @@ export default {
   text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
 }
 
-.avatar-img:hover {
-  animation: load 2s;
-}
-@keyframes load {
-  0% {
-    opacity: 0.4;
-  }
-
-  100% {
-    opacity: 1;
-    scale: 1.2;
-  }
-}
-.intro {
-  animation: loading-intro 2s ease-out 1s;
-}
-@keyframes loading-intro {
-  0% {
-    opacity: 0.2;
-    transform: translateX(-1000%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-.profile-img {
-  animation: loading-image 2s ease-out 1s;
-}
-@keyframes loading-image {
-  0% {
-    opacity: 0.2;
-    transform: translateX(1000%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
 </style>

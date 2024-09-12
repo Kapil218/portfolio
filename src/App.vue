@@ -32,7 +32,7 @@
       <v-btn icon @click.stop="drawer = !drawer">
         <v-icon>mdi-menu</v-icon>
       </v-btn>
-      <v-btn href="#hero" class="nav" rounded x-large text>
+      <v-btn href="#hero"  rounded x-large text>
         <span style="font-family: cursive" class="grey--text mr-2"
           >Portfolio</span
         >
@@ -104,21 +104,5 @@ export default {
   /* Gradient */
   background-image: linear-gradient(to bottom right, #000000, #262e30);
 }
-.nav {
-  animation: loading-nav 2s ease-out 1s;
-}
-@keyframes loading-nav {
-  0% {
-    opacity: 0.1;
-    transform: translateX(1000%);
-  }
-  50% {
-    opacity: 0.2;
-    transform: translateX(1000%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
+
 </style>

@@ -12,15 +12,13 @@
       I'm Working on</v-col
     >
     <v-col
-      cols="12"
+      cols="10"
       class="mb-4"
-      style="color: rgb(218, 208, 208); word-spacing: 5px"
+      style="color: rgb(218, 208, 208); word-spacing: 3px"
     >
-      Adopting a straightforward and uncomplicated approach to life, while still
-      maintaining ambitious aspirations, is my philosophy. With this mindset, I
-      am actively pursuing my objectives.</v-col
+    Adopting a straightforward and uncomplicated approach to life, while still holding onto ambitious aspirations, forms the core of my personal philosophy. I believe that simplicity allows for greater focus and clarity, helping to navigate the complexities of life without unnecessary distractions. This approach keeps me grounded, yet it doesn't diminish my drive to aim high and reach for my goals. With this mindset, I am able to pursue my objectives with determination, balancing practicality with vision, and consistently working towards making my aspirations a reality.</v-col
     >
-
+<v-col   cols="12"></v-col>
     <v-col
       md="2"
       cols="6"
@@ -62,6 +60,10 @@ export default {
         { name: "NodeJs", src: require("../assets/nodejs.svg") },
         { name: "Bootstrap", src: require("../assets/bootstrap.svg") },
         { name: "Github", src: require("../assets/github.png") },
+        { name: "MySql", src: require("../assets/mysql-official.svg") },
+        { name: "Tailwind", src: require("../assets/tailwindcss.svg") },
+        { name: "Docker", src: require("../assets/docker-svgrepo-com.svg") },
+
       ],
     };
   },

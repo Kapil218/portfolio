@@ -5,33 +5,18 @@
     :style="{ padding: isMobile ? '4rem 12px' : '4rem' }"
   >
     <v-col cols="12" class="text-h4 mb-4" style="color: rgb(92, 181, 94)">
-      Acadmics & CV</v-col
-    >
-    <v-col col="12" sm="12" md="8" class="my-3">
-      <v-card class="pa-3 black">
-        <h2 class="purple--text mb-4">Qualifications</h2>
-        <div style="color: aqua; font-family: Lucida Console">
-          <p>
-            👉 BTech(2025): Maharaja Agerasen Institute of Technology, New Delhi
-          </p>
-
-          <p>
-            👉 Senior Secondory: Maharana apratap Sen. Sec. School, Jaipur
-            (93.6%)
-          </p>
-
-          <p>👉 Secondary: Saint Greek School, Jaipur (84.6%)</p>
-        </div>
-      </v-card>
+      Academics & CV
     </v-col>
     <v-col cols="12" md="4" sm="12">
       <v-card class="black pa-3">
         <h2 class="purple--text mb-4">For More...</h2>
         <p class="text-center">
-          <v-btn outlined color="yellow">Download CV</v-btn>
-        </p></v-card
-      ></v-col
-    >
+          <v-btn outlined color="yellow" href="https://drive.google.com/uc?export=download&id=106u-SNNZ30nNg4OBuHL069R0LVB6ABO1">
+            Download CV
+          </v-btn>
+        </p>
+      </v-card>
+    </v-col>
   </v-row>
 </template>
 
